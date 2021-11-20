@@ -1,10 +1,18 @@
 import React from "react";
 import "./Toggle.css";
 
-interface TextareaProps {}
+interface ToggleProps {
+  state: boolean;
+  backgroundColor: { control: 'color' };
+}
 
-export const Toggle = ({ ...props }: TextareaProps) => {
-  // --- YOUR CODE HERE ---
+export const Toggle = ({state = true, backgroundColor = { control: 'color' } }: ToggleProps) => {
 
-  return <>Toggle</>;
+  return (
+    <label className={'Toggle'}>
+      <input className={'input'} type='checkbox' checked={state}/>
+      <span className={'slider round'}> </span>
+    </label>
+  ); // color={backgroundColor.control}
+
 };

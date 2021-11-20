@@ -6,6 +6,9 @@ import { Toggle } from "./Toggle";
 export default {
   title: "Components/Toggle",
   component: Toggle,
+  argTypes: {
+    backgroundColor: { control: 'color' },
+  },
 } as ComponentMeta<typeof Toggle>;
 
 const Template: ComponentStory<typeof Toggle> = (args) => <Toggle {...args} />;
